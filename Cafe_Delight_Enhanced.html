@@ -1,0 +1,187 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Café Delight</title>
+    <style>
+        /* General Styles */
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #333;
+        }
+        header {
+            background-color: #5D4037;
+            color: white;
+            padding: 15px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        header nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+        }
+        header nav a:hover {
+            text-decoration: underline;
+        }
+        .section {
+            padding: 50px 20px;
+            text-align: center;
+        }
+        .landing {
+            background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+                        url('./img.jpg') no-repeat center center/cover;
+            color: white;
+            height: 400px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        .landing h2 {
+            font-size: 2.5rem;
+            margin: 0;
+        }
+        .landing p {
+            font-size: 1.2rem;
+            margin-top: 10px;
+        }
+        .cards {
+            display: flex;
+            gap: 30px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        .card {
+            border: 1px solid #ddd;
+            padding: 20px;
+            border-radius: 8px;
+            text-align: center;
+            width: 300px;
+            background-color: #FAFAFA;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+        }
+        .card img {
+            border-radius: 8px;
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+        }
+        .form-section {
+            background-color: #FBE9E7;
+            padding: 20px;
+            border-radius: 8px;
+            max-width: 500px;
+            margin: auto;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .form-section input, .form-section textarea {
+            width: 100%;
+            margin: 15px 0;
+            padding: 10px;
+            border: 1px solid #CCC;
+            border-radius: 4px;
+            font-size: 1rem;
+        }
+        .form-section button {
+            background-color: #5D4037;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            cursor: pointer;
+            border-radius: 4px;
+            font-size: 1rem;
+        }
+        .form-section button:hover {
+            background-color: #3E2723;
+        }
+        footer {
+            background-color: #5D4037;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            font-size: 0.9rem;
+        }
+        footer a {
+            color: #FFCCBC;
+            text-decoration: none;
+        }
+        footer a:hover {
+            text-decoration: underline;
+        }
+        iframe {
+            border: none;
+            width: 100%;
+            height: 300px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Café Delight</h1>
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#menu">Menu</a>
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+    <section id="home" class="landing">
+        <h2>Welcome to Café Delight</h2>
+        <p>Indulge in the perfect blend of taste and ambiance.</p>
+    </section>
+    <section id="menu" class="section">
+        <h2>Our Menu</h2>
+        <div class="cards">
+            <div class="card">
+                <img src="https://via.placeholder.com/300x200/FFEB3B/000000?text=Espresso" alt="Espresso">
+                <h3>Espresso</h3>
+                <p>Rich and aromatic coffee shot.</p>
+            </div>
+            <div class="card">
+                <img src="https://via.placeholder.com/300x200/8BC34A/FFFFFF?text=Latte" alt="Latte">
+                <h3>Latte</h3>
+                <p>Creamy and delightful coffee.</p>
+            </div>
+            <div class="card">
+                <img src="https://via.placeholder.com/300x200/E91E63/FFFFFF?text=Cheesecake" alt="Cheesecake">
+                <h3>Cheesecake</h3>
+                <p>Deliciously smooth and sweet.</p>
+            </div>
+        </div>
+    </section>
+    <section id="about" class="section">
+        <h2>About Us</h2>
+        <p>At Café Delight, we take pride in crafting a cozy space for coffee enthusiasts to unwind and savor quality flavors.</p>
+    </section>
+    <section id="contact" class="section">
+        <h2>Contact Us</h2>
+        <div class="form-section">
+            <form>
+                <input type="text" placeholder="Your Name" required>
+                <input type="email" placeholder="Your Email" required>
+                <textarea placeholder="Your Message" rows="4" required></textarea>
+                <button type="submit">Send</button>
+            </form>
+        </div>
+        <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.086074301771!2d144.96305831531858!3d-37.81362797975171!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad642af0f11fd81%3A0xf5774c153211c5f7!2sFlinders+Street+Station!5e0!3m2!1sen!2sau!4v1516167810155">
+        </iframe>
+    </section>
+    <footer>
+        <p>&copy; 2024 Café Delight. All rights reserved. | salamaabusiam@gmail.com | 1301202635 <br> <a href="#home">Back to Top</a></p>
+    </footer>
+</body>
+</html>
